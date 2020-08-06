@@ -1,11 +1,40 @@
 import React from 'react';
 class Signup extends React.Component {
-    state = {  }
-    render() { 
+    constructor(props) {
+        super(props);
+        this.state = {
+          username: '',
+          age: null,
+        };
+      }
+      myChangeHandler = (event) => {
+        let nam = event.target.name;
+        let val = event.target.value;
+        this.setState({[nam]: val});
+      }
+      render() {
         return (
-            <div>
-                <h1>This is signup Page!!!!</h1>
-            </div>
+          <form>
+    <h1>Signup form</h1>
+          <p>Enter your name:</p>
+          <input
+            type='text'
+            name='username'
+            onChange={this.myChangeHandler}
+          />
+          <p>Enter your emailid:</p>
+          <input
+            type='text'
+            name='age'
+            onChange={this.myChangeHandler}
+          />
+          <p>Enter your Password:</p>
+          <input
+            type='text'
+            name='age'
+            onChange={this.myChangeHandler}
+          />
+          </form>
           );
     }
 }

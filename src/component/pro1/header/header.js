@@ -7,8 +7,8 @@ class  Header extends React.Component {
         return ( 
             <div>
              <NavigationBar></NavigationBar>       
-            <h1>This is header!!!!</h1>
             </div>
+            
          );
     }
 }
