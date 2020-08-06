@@ -1,0 +1,41 @@
+{
+    "allProdcts": [
+    {
+      "id": 1,
+      "Product name": "Mobile",
+      "Product Category": "Gadgets",
+      "Product Qantity":100,
+      "Product Price":20000
+
+      
+      
+    },
+    {
+      "id": 2,
+      "Product name": "Cheese",
+      "Product Category": "Milk Products",
+      "Product Qantity":150,
+      "Product Price":100
+      
+      
+    },
+    {
+      "id": 3,
+      "Product name": "Jeans",
+      "Product Category": "clothing",
+      "Product Qantity":150,
+      "Product price":1000
+      
+      
+    },
+    {
+      "id": 4,
+      "Product name": "Laptop",
+      "Product Category": "Gadgets",
+      "Product Qantity":200,
+      "Product price":100000
+      
+      
+    }
+  ]
+}
