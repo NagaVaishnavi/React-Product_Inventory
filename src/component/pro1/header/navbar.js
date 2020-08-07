@@ -2,24 +2,30 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
+
 class NavigationBar extends React.Component {
     
     render() { 
         const menuitem = {
             color:"red",
-            backgroundColor:"pink",
+            backgroundColor:"lightblue",
             display:'inline',
-            padding: '10px',
-            margin: '5px'
+            padding:'18px 116px'
+           
+           
+            
+            
             
         }
 
 
         return (  
-            <span>
+            <div>
+           
+            
                 <ul style={{listStyleType:'none'}}>
                     <li style={menuitem}>
-                        <Link to="/" style={{ textDecoration:'none'}}>Home</Link>
+                        <Link to="/" style={{ textDecoration:'none'}}>Logo</Link>
                     </li>
                     <li style={menuitem}>
                         <Link to="/products" style={{ textDecoration:'none'}}>Products</Link>
@@ -34,7 +40,8 @@ class NavigationBar extends React.Component {
                         <Link to="/signup" style={{ textDecoration:'none'}}>Signup</Link>
                     </li>
                 </ul>
-            </span>
+                
+                </div>      
 
         );
     }

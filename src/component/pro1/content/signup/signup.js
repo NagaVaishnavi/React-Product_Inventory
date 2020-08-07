@@ -1,9 +1,11 @@
 import React from 'react';
+
+
 class Signup extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          username: '',
+          username: '', 
           age: null,
         };
       }
@@ -14,7 +16,7 @@ class Signup extends React.Component {
       }
       render() {
         return (
-          <form>
+          <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
     <h1>Signup form</h1>
           <p>Enter your name:</p>
           <input
@@ -34,7 +36,9 @@ class Signup extends React.Component {
             name='age'
             onChange={this.myChangeHandler}
           />
-          </form>
+<br></br><br></br>
+<button>signup</button>
+         </div>
           );
     }
 }

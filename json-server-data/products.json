@@ -1,41 +1,11 @@
 {
-    "allproducts": [
-    {
-      "id": 1,
-      "Product_Name": "Mobile",
-      "Product_Category": "Gadgets",
-      "Product_Quantity":100,
-      "Product_Price":20000
-
-      
-      
-    },
-    {
-      "id": 2,
-      "Product_Name": "Cheese",
-      "Product_Category": "Products",
-      "Product_Quantity":150,
-      "Product_Price":100
-      
-      
-    },
+  "allproducts": [
     {
       "id": 3,
       "Product_Name": "Jeans",
       "Product_Category": "clothing",
-      "Product_Quantity":150,
-      "Product_Price":1000
-      
-      
-    },
-    {
-      "id": 4,
-      "Product_Name": "Laptop",
-      "Product_Category": "Gadgets",
-      "Product_Quantity":200,
-      "Product_Price":100000
-      
-      
+      "Product_Quantity": 150,
+      "Product_Price": 1000
     }
   ]
 }
