@@ -8,11 +8,41 @@ class AddProduct extends React.Component {
             productid:'',
             productname:'',
             productcategory:'',
+            productquantity:'',
             productprice:'',
-           
+            productimage:'',
+            buttonStatus: false
         }
     }
-
+    checkValidation=()=>{
+       
+        let nameerror = ''
+        //let sinceerror = ''
+        if(this.state.productname.includes('#')){
+            console.log('name having #!');
+            nameerror = 'name having invalid #'
+        }
+        if(this.state.productname.includes('$')){
+            console.log('name having $!');
+            nameerror = 'name having invalid $'
+        }
+        //check for other conditions!
+        if(nameerror){
+            console.log('set state for nameError');
+            this.setState({
+                 nameError: nameerror,
+                 buttonStatus: true
+             })
+            
+            return false
+        }
+ 
+        this.setState({
+            nameError:'',
+            buttonStatus:false
+         })
+        return true
+     }
     
        
 
@@ -23,7 +53,7 @@ class AddProduct extends React.Component {
         console.log(event.target.value)
         
         this.setState({productid: event.target.value})
-    
+        
         
         }
 
@@ -32,9 +62,9 @@ class AddProduct extends React.Component {
         console.log(event)
         console.log(event.target)
         console.log(event.target.value)
-       
+        this.checkValidation()
         this.setState({productname: event.target.value})
-        
+        this.checkValidation()
 
         }
 
@@ -43,9 +73,9 @@ class AddProduct extends React.Component {
             console.log(event)
             console.log(event.target)
             console.log(event.target.value)
-           
-           
-    
+            this.checkValidation()
+            this.setState({productcategory: event.target.value})
+            this.checkValidation()
             }
 
             getQuantity=(event)=>{
@@ -69,6 +99,13 @@ class AddProduct extends React.Component {
                    
             
                     }
+                    getImage=(event)=>{
+                        console.log(event);
+                        console.log(event.target);
+                        console.log(event.target.value);
+                        console.log(event.target.value.substr(12));
+                        this.setState({productimage: event.target.value.substr(12)})
+                    }
 
 
         addProduct=()=>{
@@ -78,10 +115,11 @@ class AddProduct extends React.Component {
                 "Product_Name": this.state.productname,
                 "Product_Category": this.state.productcategory,
                 "Product_Quantity":this.state.productquantity,
-                "Product_Price":this.state.productprice
+                "Product_Price":this.state.productprice,
+                "Product_Image":this.state.productimage
                 
             }
-            axios.post('http://localhost:3000/allproducts', productRequestBody)
+            axios.post('http://localhost:3003/allproducts', productRequestBody)
                     .then(response=>{
                         console.log(response);
                         this.props.history.push('/')
@@ -95,12 +133,10 @@ class AddProduct extends React.Component {
       
         
         return (
-            <div className="container c1" style={{width:'30%',align:'center',backgroundColor: 'lightblue'}}>
+            <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
                 <h3>Add New Product</h3>
                 <form>
-                <p>Product id: </p>
-                    <input type='text' id="productid" onChange={this.getId}></input>
-                    {this.state.nameError}
+               
                    
 
                     <p>Product Name: </p>
@@ -123,6 +159,9 @@ class AddProduct extends React.Component {
                     {this.state.nameError}
                     <br></br> <br></br>
 
+                    <p>Product Image: </p>
+                    <input type="file" onChange={this.getImage} multiple accept='image/*' />
+                    <br></br><br></br>
                     <button type="button" onClick={this.addProduct} disabled={this.state.buttonStatus}>Add Product</button>
                     <br></br>
                     

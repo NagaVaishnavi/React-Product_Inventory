@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Axios from 'axios';
-
+import styles from './products.css';
 import { Redirect } from "react-router-dom";
 import AddProduct from '../addproduct';
 
@@ -21,7 +21,7 @@ class App extends React.Component {
     this.getProducts();
   }
   getProducts() {
-    Axios.get('http://localhost:3000/allproducts')
+    Axios.get('http://localhost:3003/allproducts')
       .then(response => {
         this.setState({ products: response.data })
         console.log(response.data)
@@ -33,7 +33,7 @@ class App extends React.Component {
   deleteProduct=(event)=>{
     console.log(event.target.id);
     let id = event.target.id;
-    Axios.delete('http://localhost:3000/allproducts/'+id)
+    Axios.delete('http://localhost:3003/allproducts/'+id)
       .then(_response=>{
         console.log("Deletion Success");
         this.getProducts();
@@ -57,7 +57,7 @@ class App extends React.Component {
     this.setState({searchValue: searchV})
     console.log(searchV);
     let searchF = this.state.products.filter(p=>{
-                            return p.name.match(searchV)
+                            return p.Product_Name.match(searchV)
                         })
     console.log(searchF);    
     this.setState({products: searchF})  
@@ -74,11 +74,19 @@ editHandler=(e)=>{
 
   render() {
 
+    let imgStyle ={
+      width:'50px',
+      borderRadius:'10px'
+  }
+  
+
+  
+
     if(this.state.editClicked){
       this.setState({editClicked:false})
       console.log()
-      return <Redirect to={{pathname:"/editProduct" ,state:{
-        product:this.state.products.filter(p=>p.id==this.state.editId)
+      return <Redirect to={{pathname:"/editproduct" ,state:{
+        product:this.state.products.filter(p=>p.id===this.state.editId)
       }}}></Redirect>
     }
    return (
@@ -99,11 +107,12 @@ editHandler=(e)=>{
       <h1>Products</h1>
       <table border="1">
                 <tr>
-                  
+                
                   <th>Product Name</th>
                   <th>Product Category</th>
                   <th>Product Quantity</th>
                   <th>Product Price</th>
+                  <th>Product Image</th>
                   <th></th>
                   <th></th>
                   
@@ -111,12 +120,16 @@ editHandler=(e)=>{
                 </tr>
                   {this.state.products.map(product=>{
                     return (
+
+                      
                       <tr>
-                 
+                
                   <td>{product.Product_Name}</td>
                   <td>{product.Product_Category}</td>
                   <td>{product.Product_Quantity}</td>
                   <td>{product.Product_Price}</td>
+                  <td><img src={"images/" + product.Product_Image} style={imgStyle}></img></td>
+                  
                   <td><input type="button" id={product.id} value="Edit"  onClick={this.editHandler} /></td>
                   <td><input type="button" id={product.id} value="Delete"  onClick={this.deleteProduct} /></td>
                 </tr>

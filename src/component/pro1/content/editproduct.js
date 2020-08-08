@@ -58,14 +58,12 @@ class EditProduct extends React.Component {
    render() { 
        return (
    <div>
-   <h3 className="he1">Edit Product</h3>
-   <hr/>
+   
    <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+   <h3>Edit Product</h3>
    <form>
-                <p>Product id: </p>
-                    <input type='text' id="productid" onChange={this.getId}></input>
-                    {this.state.nameError}
-                   
+               
+   
 
                     <p>Product Name: </p>
                     <input type='text' id="productname" onChange={this.nameChangeHandler}></input>
@@ -87,7 +85,7 @@ class EditProduct extends React.Component {
                     {this.state.nameError}
                     <br></br> <br></br>
 
-                    <button type="submit"  onClick={this.editProduct}>Edit Product</button>
+                    <button type="submit"  onClick={this.editProduct} disabled={this.state.buttonStatus}>Edit Product</button>
                     <br></br>
                     </form>
                     </div>

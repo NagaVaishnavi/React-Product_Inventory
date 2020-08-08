@@ -16,7 +16,7 @@ class Login extends React.Component {
       render() {
         return (
           <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
-    <h1>Signup form</h1>
+    <h1>Login form</h1>
           <p>Enter your name:</p>
           <input
             type='text'
@@ -30,7 +30,7 @@ class Login extends React.Component {
             onChange={this.myChangeHandler}
           />
           <br></br><br></br>
-          <button>login</button>
+          <button>Login</button>
          </div>
          );
     }

@@ -5,7 +5,7 @@ class  Dashboard extends React.Component {
     render() { 
         return ( 
             <div>
-                <h1>This is dashboard Page!!!!</h1>
+                <h1>Here charts and bar diagrams displayed</h1>
             </div>
          );
     }

@@ -1,11 +1,44 @@
 {
   "allproducts": [
     {
-      "id": 3,
-      "Product_Name": "Jeans",
+      "id": "1",
+      "Product_Name": "top",
       "Product_Category": "clothing",
-      "Product_Quantity": 150,
-      "Product_Price": 1000
+      "Product_Quantity": "56",
+      "Product_Price": "9000",
+      "Product_Image": "1.jpg"
+    },
+    {
+      "id": "2",
+      "Product_Name": "pants",
+      "Product_Category": "clothing",
+      "Product_Quantity": "45",
+      "Product_Price": "234",
+      "Product_Image": "2.jpg"
+    },
+    {
+      "id": "3",
+      "Product_Name": "kurtis",
+      "Product_Category": "clothing",
+      "Product_Quantity": "34",
+      "Product_Price": "500",
+      "Product_Image": "3.jpg"
+    },
+    {
+      "id": "tgw51Oe",
+      "Product_Name": "Cheese",
+      "Product_Category": "milk",
+      "Product_Quantity": "20",
+      "Product_Price": "34",
+      "Product_Image": "3.jpg"
+    },
+    {
+      "id": "iBCUtSe",
+      "Product_Name": "Mobile",
+      "Product_Category": "Accessories",
+      "Product_Quantity": "35",
+      "Product_Price": "12000",
+      "Product_Image": "logoimage2.jpg"
     }
   ]
 }
