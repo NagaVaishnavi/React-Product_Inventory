@@ -39,6 +39,14 @@
       "Product_Quantity": "35",
       "Product_Price": "1000",
       "Product_Image": "2.jpg"
+    },
+    {
+      "id": "6",
+      "Product_Name": "ipad",
+      "Product_Category": "Accessories",
+      "Product_Quantity": "200",
+      "Product_Price": "15000",
+      "Product_Image": "2.jpg"
     }
   ],
   "userdetails": [
@@ -72,6 +80,14 @@
       "Name": "vaishu",
       "Email": "vaishu.g738@gmail.com",
       "Userid": "vaishu",
+      "Password": "abc@1",
+      "ConfirmPassword": "abc@1"
+    },
+    {
+      "id": "rtvgf",
+      "Name": "rtvgf",
+      "Email": "Vaishu.g738@gmail.com",
+      "Userid": "rtvgf",
       "Password": "abc@1",
       "ConfirmPassword": "abc@1"
     }

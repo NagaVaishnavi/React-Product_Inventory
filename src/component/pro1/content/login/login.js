@@ -110,7 +110,7 @@ render() {
             <p>Password</p>
             <input type="password" id="pwd" onChange={this.getPwd} placeholder="enter password"></input><br></br>
             <br></br>
-            <button onClick={this.checkLogin} id="login" >Login</button><span >{this.state.msgResponse}</span>
+            <button onClick={this.checkLogin} id="login" style={{backgroundcolor:'white', color:' black', border: '2px solid #008CBA'}}>Login</button><span >{this.state.msgResponse} </span>
             {/* <span >{this.state.pwdResponse}</span> */}
             <br></br><br></br>
             <Link to='/signup' id="reg">Don't have an account?,signup here</Link>

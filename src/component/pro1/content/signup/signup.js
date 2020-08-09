@@ -138,7 +138,7 @@ class Signup extends React.Component {
                     <p>Confirm Password</p>
                     <input type="password" id="cpwd" onChange={this.getCpwd} required></input>
                     <br></br><br></br>
-                    <button id="save" onClick={this.saveUser} disabled={this.state.buttonStatus}>SignUp</button>
+                    <button id="save" onClick={this.saveUser} disabled={this.state.buttonStatus} style={{backgroundcolor:'white', color:' black', border: '2px solid #008CBA'}}>SignUp</button>
                     <br></br><br></br>
                     <Link to='/login' id="reg">Already a member,login here..</Link>
                 </form>
