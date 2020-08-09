@@ -7,8 +7,15 @@ class EditProduct extends React.Component {
         quantity:'',
         price:'',
         id:0,
+        productimage:'',
         isSuccess:false
      }
+
+     idChangeHandler=(e)=>{
+        console.log(e.target.value)
+       this.setState({id : e.target.value});
+    }
+
      nameChangeHandler=(e)=>{
         console.log(e.target.value)
        this.setState({pname : e.target.value});
@@ -29,7 +36,13 @@ class EditProduct extends React.Component {
        this.setState({quantity:e.target.value})
      }
 
-    
+     getImage=(event)=>{
+        console.log(event);
+        console.log(event.target);
+        console.log(event.target.value);
+        console.log(event.target.value.substr(12));
+        this.setState({productimage: event.target.value.substr(12)})
+    }
 
     editProduct=(e)=>{
         e.preventDefault();
@@ -44,10 +57,11 @@ class EditProduct extends React.Component {
             
         }
 
-        Axios.put('http://localhost:3000/products/'+this.state.id,data)
+        Axios.put('http://localhost:3000/allproducts/'+this.state.id,data)
            .then(response=>{
                console.log(response);
                this.setState({isSuccess:true});
+               this.props.history.push('/dashboard')
            },error=>{
                console.log(error);
            })
@@ -64,6 +78,10 @@ class EditProduct extends React.Component {
    <form>
                
    
+                     <p>Product Id: </p>
+                    <input type='text' id="productname" onChange={this.idChangeHandler}></input>
+                    {this.state.nameError}
+                    <br></br>
 
                     <p>Product Name: </p>
                     <input type='text' id="productname" onChange={this.nameChangeHandler}></input>
@@ -84,6 +102,10 @@ class EditProduct extends React.Component {
                     <input type='number' id="productprice" onChange={this.priceChangeHandler}></input>
                     {this.state.nameError}
                     <br></br> <br></br>
+
+                    <p>Product Image: </p>
+                    <input type="file" onChange={this.getImage} multiple accept='image/*' />
+                    <br></br><br></br>
 
                     <button type="submit"  onClick={this.editProduct} disabled={this.state.buttonStatus}>Edit Product</button>
                     <br></br>

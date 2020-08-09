@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-
 class NavigationBar extends React.Component {
     
     render() { 
@@ -17,6 +15,12 @@ class NavigationBar extends React.Component {
             
             
         }
+        let imgStyle ={
+            width:'70px',
+            height:'40px',
+           
+            borderRadius:'10px'
+        }
 
 
         return (  
@@ -25,7 +29,7 @@ class NavigationBar extends React.Component {
             
                 <ul style={{listStyleType:'none'}}>
                     <li style={menuitem}>
-                        <Link to="/" style={{ textDecoration:'none'}}>Logo</Link>
+                        <Link><img src="images/logoimage2.jpg" alt="Logo" style={imgStyle}></img></Link>
                     </li>
                     <li style={menuitem}>
                         <Link to="/products" style={{ textDecoration:'none'}}>Products</Link>

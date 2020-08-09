@@ -13,6 +13,7 @@ class App extends React.Component {
       searchProducts:[],
             searchValue:'',
             editId:0,
+            
             editClicked:false
     }
   }
@@ -21,7 +22,7 @@ class App extends React.Component {
     this.getProducts();
   }
   getProducts() {
-    Axios.get('http://localhost:3003/allproducts')
+    Axios.get('http://localhost:3000/allproducts')
       .then(response => {
         this.setState({ products: response.data })
         console.log(response.data)
@@ -33,7 +34,7 @@ class App extends React.Component {
   deleteProduct=(event)=>{
     console.log(event.target.id);
     let id = event.target.id;
-    Axios.delete('http://localhost:3003/allproducts/'+id)
+    Axios.delete('http://localhost:3000/allproducts/'+id)
       .then(_response=>{
         console.log("Deletion Success");
         this.getProducts();
@@ -107,7 +108,7 @@ editHandler=(e)=>{
       <h1>Products</h1>
       <table border="1">
                 <tr>
-                
+              
                   <th>Product Name</th>
                   <th>Product Category</th>
                   <th>Product Quantity</th>
@@ -123,7 +124,7 @@ editHandler=(e)=>{
 
                       
                       <tr>
-                
+               
                   <td>{product.Product_Name}</td>
                   <td>{product.Product_Category}</td>
                   <td>{product.Product_Quantity}</td>

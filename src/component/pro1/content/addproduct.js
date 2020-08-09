@@ -119,10 +119,10 @@ class AddProduct extends React.Component {
                 "Product_Image":this.state.productimage
                 
             }
-            axios.post('http://localhost:3003/allproducts', productRequestBody)
+            axios.post('http://localhost:3000/allproducts', productRequestBody)
                     .then(response=>{
                         console.log(response);
-                        this.props.history.push('/')
+                        this.props.history.push('/products')
                     }, error=>{
                         console.error(error);
                     })
@@ -138,6 +138,11 @@ class AddProduct extends React.Component {
                 <form>
                
                    
+
+                    <p>Product Id: </p>
+                    <input type='text' id="productname" onChange={this.getId}></input>
+                    {this.state.nameError}
+                    <br></br>
 
                     <p>Product Name: </p>
                     <input type='text' id="productname" onChange={this.getName}></input>
