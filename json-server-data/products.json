@@ -90,6 +90,14 @@
       "Userid": "rtvgf",
       "Password": "abc@1",
       "ConfirmPassword": "abc@1"
+    },
+    {
+      "id": "abcd",
+      "Name": "abcd",
+      "Email": "Vaishu.g738@gmail.com",
+      "Userid": "abcd",
+      "Password": "abcd@1",
+      "ConfirmPassword": "abcd@1"
     }
   ]
 }
