@@ -6,59 +6,42 @@
       "Product_Category": "clothing",
       "Product_Quantity": "20",
       "Product_Price": "500",
-      "Product_Image": "1.jpg"
+      "Product_Image": "top.jpg"
     },
     {
       "id": "2",
       "Product_Name": "cheese",
-      "Product_Category": "Milk",
-      "Product_Quantity": "30",
+      "Product_Category": "milk",
+      "Product_Quantity": "300",
       "Product_Price": "12",
-      "Product_Image": "2.jpg"
+      "Product_Image": "cheese.jpg"
     },
     {
       "id": "3",
       "Product_Name": "Mobile",
-      "Product_Category": "Accessories",
+      "Product_Category": "Acceesories",
       "Product_Quantity": "100",
       "Product_Price": "12000",
-      "Product_Image": "3.jpg"
+      "Product_Image": "mobile.jpg"
     },
     {
       "id": "4",
-      "Product_Name": "shirts",
-      "Product_Category": "clothing",
-      "Product_Quantity": "200",
-      "Product_Price": "500",
-      "Product_Image": "1.jpg"
+      "Product_Name": "pan",
+      "Product_Category": "household",
+      "Product_Quantity": "100",
+      "Product_Price": "2000",
+      "Product_Image": "pan.jpg"
     },
     {
       "id": "5",
-      "Product_Name": "pan",
-      "Product_Category": "household",
-      "Product_Quantity": "35",
-      "Product_Price": "1000",
-      "Product_Image": "2.jpg"
-    },
-    {
-      "id": "6",
       "Product_Name": "ipad",
-      "Product_Category": "Accessories",
+      "Product_Category": "accessories",
       "Product_Quantity": "200",
       "Product_Price": "15000",
-      "Product_Image": "2.jpg"
+      "Product_Image": "ipad.jpg"
     }
   ],
-  "userdetails": [
-    {
-      "username": "abc",
-      "password": "123"
-    },
-    {
-      "username": "def",
-      "password": "345"
-    }
-  ],
+  
   "registerdetails": [
     {
       "Name": "abcde",
@@ -98,6 +81,14 @@
       "Userid": "abcd",
       "Password": "abcd@1",
       "ConfirmPassword": "abcd@1"
+    },
+    {
+      "id": "prafful",
+      "Name": "prafful",
+      "Email": "vaishu.g738@gmail.com",
+      "Userid": "prafful",
+      "Password": "abc@12",
+      "ConfirmPassword": "abc@12"
     }
   ]
 }

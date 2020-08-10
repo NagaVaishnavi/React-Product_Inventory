@@ -8,7 +8,7 @@ class NavigationBar extends React.Component {
             color:"red",
             backgroundColor:"lightblue",
             display:'inline',
-            padding:'18px 116px'
+            padding:'18px 150px'
            
            
             
@@ -29,11 +29,9 @@ class NavigationBar extends React.Component {
             
                 <ul style={{listStyleType:'none'}}>
                     <li style={menuitem}>
-                        <Link><img src="images/logoimage2.jpg" alt="Logo" style={imgStyle}></img></Link>
+                       <img src="images/logoimage2.jpg" alt="Logo" style={imgStyle}></img>
                     </li>
-                    <li style={menuitem}>
-                        <Link to="/products" style={{ textDecoration:'none'}}>Products</Link>
-                    </li>
+                    
                     <li style={menuitem}>
                         <Link to="/dashboard" style={{ textDecoration:'none'}}>Dashboard</Link>
                         </li>
