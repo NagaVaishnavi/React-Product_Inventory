@@ -1,11 +1,14 @@
 import React from 'react';
 import Axios from 'axios';
+import NavigationBar from '../header/navbar';
 class EditProduct extends React.Component {
     state = { 
         pname:'',
-        category:'',
+      
         quantity:'',
         price:'',
+        manufacturer:'',
+        vendor:'',
         id:0,
         productimage:'',
         isSuccess:false
@@ -22,9 +25,15 @@ class EditProduct extends React.Component {
     }
 
 
-    categoryChangeHandler=(e)=>{
-       this.setState({category : e.target.value});
-    }
+   
+
+    manufacturerChangeHandler=(e)=>{
+        this.setState({manufacturer : e.target.value});
+     }
+
+     vendorChangeHandler=(e)=>{
+        this.setState({vendor : e.target.value});
+     }
 
     
 
@@ -45,23 +54,27 @@ class EditProduct extends React.Component {
     }
 
     editProduct=(e)=>{
-        e.preventDefault();
+       
         console.log(this.state)
         let data={
             "Id":this.state.id,
             "Product_Name":this.state.pname,
             "Product_Category":this.state.category,
+            "Manufacturer":this.state.manufacturer,
+            "Vendor":this.state.vendor,
             "Product_Quantity":parseInt(this.state.quantity),
             "Product_Price":parseFloat(this.state.price)
             
             
         }
+        console.log("data:",data)
+        console.log("id:",this.state.id)
 
         Axios.put('http://localhost:3000/allproducts/'+this.state.id,data)
            .then(response=>{
                console.log(response);
                this.setState({isSuccess:true});
-               this.props.history.push('/dashboard')
+               this.props.history.push('/products')
            },error=>{
                console.log(error);
            })
@@ -71,6 +84,8 @@ class EditProduct extends React.Component {
 
    render() { 
        return (
+        <div>
+        <NavigationBar></NavigationBar>
    <div>
    
    <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
@@ -79,22 +94,36 @@ class EditProduct extends React.Component {
                
    
                      <p>Product Id: </p>
-                    <input type='text' id="productname" onChange={this.idChangeHandler}></input>
+                    <input type='text' id="productid" onChange={this.idChangeHandler}></input>
                     {this.state.nameError}
                     <br></br>
+
+                   
 
                     <p>Product Name: </p>
-                    <input type='text' id="productname" onChange={this.nameChangeHandler}></input>
+    <select id="pcat" onChange={this.nameChangeHandler}>
+<option>Accesories</option>
+<option>Sunglasses</option>
+<option>Handbags</option>
+<option>gloves</option>
+<option>Watches</option>
+<option>Belts</option>
+</select><span style={{ color: "red" }}>{this.nameChangeHandler}</span>
                     {this.state.nameError}
                     <br></br>
 
-                    <p>Product Category: </p>
-                    <input type='text' id="productcategory" onChange={this.categoryChangeHandler}></input>
+                    <p>Manufacturer: </p>
+                    <input type='text' value={this.state.manufacturer} id="manufacturer" onChange={this.manufacturerChangeHandler}></input>
+                    {this.state.nameError}
+                    <br></br>
+
+                    <p>Vendor: </p>
+                    <input type='text' value={this.state.vendor} id="vendor" onChange={this.vendorChangeHandler}></input>
                     {this.state.nameError}
                     <br></br>
 
                     <p>Product Quantity: </p>
-                    <input type='number' id="productquantity" onChange={this.quantityChangeHandler}></input>
+                    <input type='number' value={this.state.quantity} id="productquantity" onChange={this.quantityChangeHandler}></input>
                     {this.state.nameError}
                     <br></br>
 
@@ -112,6 +141,7 @@ class EditProduct extends React.Component {
                     </form>
                     </div>
                     { this.state.isSuccess && <h3>Product edited successfully</h3>}
+                    </div>
                     </div>
        );
     }

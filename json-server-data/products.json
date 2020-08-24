@@ -2,46 +2,50 @@
   "allproducts": [
     {
       "id": "1",
-      "Product_Name": "tops",
-      "Product_Category": "clothing",
-      "Product_Quantity": "20",
-      "Product_Price": "500",
-      "Product_Image": "top.jpg"
+      "Product_Name": "sunglasses",
+      "Product_Quantity": "100",
+      "Manufacturer": "Safilo Pvt Ltd",
+      "Vendor": "Sun Traders",
+      "Product_Price": "10000",
+      "Product_Image": "sunglass.jpg"
     },
     {
       "id": "2",
-      "Product_Name": "cheese",
-      "Product_Category": "milk",
-      "Product_Quantity": "300",
-      "Product_Price": "12",
-      "Product_Image": "cheese.jpg"
+      "Product_Name": "Watches",
+      "Product_Quantity": "150",
+      "Manufacturer": "Rolex Pvt Ltd",
+      "Vendor": "Apilo Traders",
+      "Product_Price": "14994",
+      "Product_Image": "watch.jpg"
     },
     {
       "id": "3",
-      "Product_Name": "Mobile",
-      "Product_Category": "Acceesories",
-      "Product_Quantity": "100",
-      "Product_Price": "12000",
-      "Product_Image": "mobile.jpg"
+      "Product_Name": "Handbags",
+      "Product_Quantity": "90",
+      "Manufacturer": "Lavie Pvt Ltd",
+      "Vendor": "Pecter Stores",
+      "Product_Price": "1200",
+      "Product_Image": "handbag.jpg"
     },
     {
       "id": "4",
-      "Product_Name": "pan",
-      "Product_Category": "household",
-      "Product_Quantity": "100",
-      "Product_Price": "2000",
-      "Product_Image": "pan.jpg"
+      "Product_Name": "Belts",
+      "Product_Quantity": "120",
+      "Manufacturer": "Timberland Pvt Ltd",
+      "Vendor": "Trends",
+      "Product_Price": "20000",
+      "Product_Image": "belt.jpg"
     },
     {
       "id": "5",
-      "Product_Name": "ipad",
-      "Product_Category": "accessories",
-      "Product_Quantity": "200",
-      "Product_Price": "15000",
-      "Product_Image": "ipad.jpg"
+      "Product_Name": "Gloves",
+      "Product_Quantity": "50",
+      "Manufacturer": "Appolo Pvt Ltd",
+      "Vendor": "Appolo Stores",
+      "Product_Price": "500",
+      "Product_Image": "gloves.jpg"
     }
   ],
-  
   "registerdetails": [
     {
       "Name": "abcde",
@@ -89,6 +93,62 @@
       "Userid": "prafful",
       "Password": "abc@12",
       "ConfirmPassword": "abc@12"
+    },
+    {
+      "id": "praffud",
+      "Name": "praffud",
+      "Email": "vaishu.g738@gmail.com",
+      "Userid": "praffud",
+      "Password": "abc@13",
+      "ConfirmPassword": "abc@13"
+    }
+  ],
+  "allproducts1": [
+    {
+      "Product_Name": "Laptop",
+      "Product_Category": "Electronics",
+      "Product_Quantity": "100",
+      "Manufacturer": "Hp ",
+      "Vendor": "H traders",
+      "Product_Price": "55000",
+      "Product_Image": "gloves.jpg",
+      "id": 1
+    },
+    {
+      "Product_Name": "Speakers",
+      "Product_Category": "Electronics",
+      "Product_Quantity": "12",
+      "Manufacturer": "Sony",
+      "Vendor": "Av Traders",
+      "Product_Price": "2500",
+      "id": 2
+    },
+    {
+      "Product_Name": "Saree",
+      "Product_Category": "Clothing",
+      "Product_Quantity": "400",
+      "Manufacturer": "Archana ",
+      "Vendor": "Dd Clothes store",
+      "Product_Price": "1500",
+      "id": 3
+    },
+    {
+      "Product_Name": "Pan",
+      "Product_Category": "Household",
+      "Product_Quantity": "50",
+      "Manufacturer": "Prestige",
+      "Vendor": "Ad Store",
+      "Product_Price": "1000",
+      "id": 4
+    },
+    {
+      "Product_Name": "Watches",
+      "Product_Category": "Accessories",
+      "Product_Quantity": "25",
+      "Manufacturer": "Rolex",
+      "Vendor": "TR stores",
+      "Product_Price": "12000",
+      "id": 5
     }
   ]
 }

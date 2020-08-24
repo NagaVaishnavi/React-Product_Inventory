@@ -14,7 +14,7 @@ class Content extends React.Component {
         return ( 
             <div>
             <Switch>
-                <Route exact path='/' component={Home}></Route>    
+                <Route exact path='/' component={Login}></Route>    
                 <Route path='/products' component={Product}></Route>
                 <Route path='/dashboard' component={Dashboard}></Route>
                <Route path='/login' component={Login}></Route>

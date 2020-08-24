@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import NavigationBar from '../header/navbar.js'
 class AddProduct extends React.Component {
 
     constructor(props){
@@ -7,7 +8,8 @@ class AddProduct extends React.Component {
         this.state ={
             productid:'',
             productname:'',
-            productcategory:'',
+            manufacturer:'',
+            vendor:'',
             productquantity:'',
             productprice:'',
             productimage:'',
@@ -57,24 +59,15 @@ class AddProduct extends React.Component {
         
         }
 
-     getName=(event)=>{
-        
-        console.log(event)
-        console.log(event.target)
-        console.log(event.target.value)
-        this.checkValidation()
-        this.setState({productname: event.target.value})
-        this.checkValidation()
+    
 
-        }
-
-        getCategory=(event)=>{
+        getName=(event)=>{
         
             console.log(event)
             console.log(event.target)
             console.log(event.target.value)
             this.checkValidation()
-            this.setState({productcategory: event.target.value})
+            this.setState({productname: event.target.value})
             this.checkValidation()
             }
 
@@ -88,6 +81,29 @@ class AddProduct extends React.Component {
                
         
                 }
+
+                getManufacturer=(event)=>{
+        
+                    console.log(event)
+                    console.log(event.target)
+                    console.log(event.target.value)
+                 
+                    this.setState({manufacturer: event.target.value})
+                   
+            
+                    }
+
+                    getVendor=(event)=>{
+        
+                        console.log(event)
+                        console.log(event.target)
+                        console.log(event.target.value)
+                     
+                        this.setState({vendor: event.target.value})
+                       
+                
+                        }
+                
 
                 getPrice=(event)=>{
         
@@ -113,8 +129,9 @@ class AddProduct extends React.Component {
             let productRequestBody = {
                 "id":this.state.productid,
                 "Product_Name": this.state.productname,
-                "Product_Category": this.state.productcategory,
                 "Product_Quantity":this.state.productquantity,
+                "Manufacturer":this.state.manufacturer,
+                "Vendor":this.state.vendor,
                 "Product_Price":this.state.productprice,
                 "Product_Image":this.state.productimage
                 
@@ -133,6 +150,8 @@ class AddProduct extends React.Component {
       
         
         return (
+            <div>
+            <NavigationBar></NavigationBar>
             <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
                 <h3>Add New Product</h3>
                 <form>
@@ -140,22 +159,37 @@ class AddProduct extends React.Component {
                    
 
                     <p>Product Id: </p>
-                    <input type='text' id="productname" onChange={this.getId}></input>
+                    <input type='text' id="productid" onChange={this.getId}></input>
                     {this.state.nameError}
                     <br></br>
+
+                    
 
                     <p>Product Name: </p>
-                    <input type='text' id="productname" onChange={this.getName}></input>
-                    {this.state.nameError}
-                    <br></br>
-
-                    <p>Product Category: </p>
-                    <input type='text' id="productcategory" onChange={this.getCategory}></input>
+    <select id="pcat" onChange={this.getName}>
+   
+<option>Accesories</option>
+<option>sunglasses</option>
+<option>Watches</option>
+<option>Handbags</option>
+<option>Belts</option>
+<option>Gloves</option>
+</select><span style={{ color: "red" }}>{this.getName}</span>
                     {this.state.nameError}
                     <br></br>
 
                     <p>Product Quantity: </p>
                     <input type='number' id="productquantity" onChange={this.getQuantity}></input>
+                    {this.state.nameError}
+                    <br></br>
+
+                    <p>Manufacturer: </p>
+                    <input type='text' id="manufacturer" onChange={this.getManufacturer}></input>
+                    {this.state.nameError}
+                    <br></br>
+
+                    <p>Vendor: </p>
+                    <input type='text' id="vendor" onChange={this.getVendor}></input>
                     {this.state.nameError}
                     <br></br>
 
@@ -172,6 +206,7 @@ class AddProduct extends React.Component {
                     
                     
                 </form>
+            </div>
             </div>
           );
     }

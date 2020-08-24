@@ -1,9 +1,10 @@
 import React from 'react';
 
 import Axios from 'axios';
-import styles from './products.css';
+import  './products.css';
 import { Redirect } from "react-router-dom";
 import AddProduct from '../addproduct';
+import NavigationBar from '../../header/navbar';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class App extends React.Component {
   deleteProduct=(event)=>{
     console.log(event.target.id);
     let id = event.target.id;
+    console.log("id:",id)
     Axios.delete('http://localhost:3000/allproducts/'+id)
       .then(_response=>{
         console.log("Deletion Success");
@@ -66,18 +68,24 @@ class App extends React.Component {
 
 }
 
-editHandler=(e)=>{
-  console.log("in edit handler");
-  this.setState({editId:e.target.id});
+editHandler=(event)=>{
+  console.log(event.target.id);
+    let id = event.target.id;
+    console.log("id:",id)
+    Axios.get('http://localhost:3000/allproducts/'+id)
+  //this.setState({editId:id});
+  console.log("set:",id)
  this.setState({editClicked:true})
 }
+
 
 
   render() {
 
     let imgStyle ={
-      width:'50px',
-      borderRadius:'10px'
+      width:'60px',
+      borderradius: '50%'
+     
   }
   
 
@@ -91,6 +99,10 @@ editHandler=(e)=>{
       }}}></Redirect>
     }
    return (
+     <div>
+     <div>
+       <NavigationBar></NavigationBar>
+     </div>
      
     <div>
 
@@ -101,16 +113,20 @@ editHandler=(e)=>{
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                   <button onClick={this.openAddProduct}>Add Product</button>
                  
+
+
+
               </div>
 
               
-              <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
-      <h1>Products</h1>
-      <table border="1">
+              <div className="c2" style={{width:'100%',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '0px 0% 0px 2%'}}>
+      <h1>Products </h1>
+      <table border='1'>
                 <tr>
-              
+              <th>Product Id</th>
                   <th>Product Name</th>
-                  <th>Product Category</th>
+                  <th>Manufacturer</th>
+                  <th>Vendor</th>
                   <th>Product Quantity</th>
                   <th>Product Price</th>
                   <th>Product Image</th>
@@ -124,15 +140,17 @@ editHandler=(e)=>{
 
                       
                       <tr>
-               
+                <td>{product.id}</td>
                   <td>{product.Product_Name}</td>
-                  <td>{product.Product_Category}</td>
+                 
+                    <td>{product.Manufacturer}</td>
+                    <td>{product.Vendor}</td>
                   <td>{product.Product_Quantity}</td>
                   <td>{product.Product_Price}</td>
                   <td><img src={"images/" + product.Product_Image} style={imgStyle}></img></td>
                   
-                  <td><input type="button" id={product.id} value="Edit"  onClick={this.editHandler} /></td>
-                  <td><input type="button" id={product.id} value="Delete"  onClick={this.deleteProduct} /></td>
+                  <td><input type="button" class="btn" id={product.id} value="Edit"  onClick={this.editHandler} /></td>
+                  <td><input type="button" class="btn2"id={product.id} value="Delete"  onClick={this.deleteProduct} /></td>
                 </tr>
                     )
                   })}
@@ -141,6 +159,7 @@ editHandler=(e)=>{
               </table>
       </div>
      
+    </div>
     </div>
     )
   }

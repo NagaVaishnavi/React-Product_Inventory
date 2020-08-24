@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Axios from 'axios'
+import NavigationBar from '../../header/navbar';
 
 class Login extends React.Component {
   constructor(props){
@@ -102,6 +103,7 @@ checkLogin = () => {
 
 render() { 
     return ( 
+       
       <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
         <h1>LOGIN FORM</h1>
        
@@ -117,6 +119,7 @@ render() {
                 
        
         </div>
+       
      );
 }
 }
