@@ -7,7 +7,8 @@ import RootComponent from "./component/RootComponent";
 
 ReactDOM.render(
   <HashRouter>
-                        <RootComponent></RootComponent> 
+                        <RootComponent></RootComponent>
+                      
                     </HashRouter>,
   document.getElementById('root')
 );
