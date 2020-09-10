@@ -14,7 +14,6 @@ class App extends React.Component {
       searchProducts:[],
             searchValue:'',
             editId:0,
-            
             editClicked:false
     }
   }
@@ -78,12 +77,54 @@ editHandler=(event)=>{
  this.setState({editClicked:true})
 }
 
+quantitySort = ()=>
+{
+  let ports
+  
+  ports = this.state.products.sort((a,b) =>{ return a.Product_Quantity - b.Product_Quantity} )
+  console.log(ports)
+  this.setState({products:ports})
+  console.log(ports)
+}
 
+priceSort = ()=>
+{
+  let sorts1
+  sorts1 = this.state.products.sort((a,b) =>{ return a.Product_Price - b.Product_Price} )
+  this.setState({products:sorts1})
+  console.log(sorts1)
+}
+
+sort = (event) => {
+  let sv=event.target.value
+  console.log(sv)
+  // console.log("sort" + event.target.value)
+  // this.setState({ sortValue: event.target.value })
+  // console.log("sort" + this.state.sortValue)
+  // if (this.state.sortValue == "price") {
+  //     this.priceSort()
+
+  // }
+  // if (this.state.sortValue == "quantity") {
+  //     this.quantitySort()
+
+  // }
+  if (sv == "price") {
+      this.priceSort()
+
+  }
+  if (sv == "quantity") {
+      this.quantitySort()
+
+  }
+ 
+}
 
   render() {
 
     let imgStyle ={
       width:'60px',
+      height:'70px',
       borderradius: '50%'
      
   }
@@ -106,29 +147,39 @@ editHandler=(event)=>{
      
     <div>
 
-                  <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+                  <div className="c2" style={{width:'100%',align:'center', padding: "45px 40px",margin: '30px 30% 0 30%'}}>
                   
                   <label>Search: </label>
-                  <input type="text" value={this.state.searchValue} onChange={this.getSearch}></input>
+                  <input type="text"  placeholder="serch for products" style={{padding: "15px 20px"}} value={this.state.searchValue} onChange={this.getSearch}></input>
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  <button onClick={this.openAddProduct}>Add Product</button>
-                 
+                  <button style={{padding: "15px 20px"}} onClick={this.openAddProduct}>Add Product</button>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  <select id="sortValue" style={{padding: "15px 20px"}} onChange={this.sort}>
+                    <option>Sort by</option>
+                    <option>price</option>
+                    <option>quantity</option>
+                   
+                </select>
 
-
-
+                
               </div>
-
+<div>
               
-              <div className="c2" style={{width:'100%',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '0px 0% 0px 2%'}}>
-      <h1>Products </h1>
-      <table border='1'>
+              {/* <div className="c2" style={{width:'100%',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '0px 0% 0px 2%'}}> */}
+     
+      <table >
                 <tr>
               <th>Product Id</th>
                   <th>Product Name</th>
+                  <th>Category</th>
                   <th>Manufacturer</th>
                   <th>Vendor</th>
-                  <th>Product Quantity</th>
-                  <th>Product Price</th>
+                  <th><span id="price" onClick={this.quantitySort}>
+                  Product Quantity
+                </span></th>
+                  <th><span id="price" onClick={this.priceSort}>
+                  Product Price
+                </span></th>
                   <th>Product Image</th>
                   <th></th>
                   <th></th>
@@ -142,7 +193,7 @@ editHandler=(event)=>{
                       <tr>
                 <td>{product.id}</td>
                   <td>{product.Product_Name}</td>
-                 
+                  <td>{product.Product_Category}</td>
                     <td>{product.Manufacturer}</td>
                     <td>{product.Vendor}</td>
                   <td>{product.Product_Quantity}</td>

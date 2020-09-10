@@ -1,4 +1,4 @@
-table, td, th {
+/* table, td, th {
     border: 1px solid black;
     text-align: center;
     height: 50px;
@@ -11,7 +11,7 @@ table, td, th {
   
   th {
     height: 50px;
-  }
+  } */
 
   .btn{
     background-color: #4CAF50;
@@ -38,3 +38,24 @@ table, td, th {
   margin: 4px 2px;
   cursor: pointer;
       }
+
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 5px;
+        text-align: center;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+        height: 20%;
+      }
+      /* .sort{
+        width:40%;
+      } */

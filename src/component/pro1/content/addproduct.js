@@ -8,6 +8,7 @@ class AddProduct extends React.Component {
         this.state ={
             productid:'',
             productname:'',
+            productcategory:'',
             manufacturer:'',
             vendor:'',
             productquantity:'',
@@ -71,6 +72,16 @@ class AddProduct extends React.Component {
             this.checkValidation()
             }
 
+            getCategory=(event)=>{
+        
+                console.log(event)
+                console.log(event.target)
+                console.log(event.target.value)
+                this.checkValidation()
+                this.setState({productcategory: event.target.value})
+                this.checkValidation()
+                }
+
             getQuantity=(event)=>{
         
                 console.log(event)
@@ -129,6 +140,7 @@ class AddProduct extends React.Component {
             let productRequestBody = {
                 "id":this.state.productid,
                 "Product_Name": this.state.productname,
+                "Product_Category":this.state.productcategory,
                 "Product_Quantity":this.state.productquantity,
                 "Manufacturer":this.state.manufacturer,
                 "Vendor":this.state.vendor,
@@ -175,6 +187,11 @@ class AddProduct extends React.Component {
 <option>Belts</option>
 <option>Gloves</option>
 </select><span style={{ color: "red" }}>{this.getName}</span>
+                    {this.state.nameError}
+                    <br></br>
+
+                    <p>Product Category: </p>
+                    <input type='text' id="productcategory" onChange={this.getCategory}></input>
                     {this.state.nameError}
                     <br></br>
 

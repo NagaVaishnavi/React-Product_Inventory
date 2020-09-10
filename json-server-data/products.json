@@ -3,6 +3,7 @@
     {
       "id": "1",
       "Product_Name": "sunglasses",
+      "Product_Category": "Accessories",
       "Product_Quantity": "100",
       "Manufacturer": "Safilo Pvt Ltd",
       "Vendor": "Sun Traders",
@@ -13,6 +14,7 @@
       "id": "2",
       "Product_Name": "Watches",
       "Product_Quantity": "150",
+      "Product_Category": "Accessories",
       "Manufacturer": "Rolex Pvt Ltd",
       "Vendor": "Apilo Traders",
       "Product_Price": "14994",
@@ -22,6 +24,7 @@
       "id": "3",
       "Product_Name": "Handbags",
       "Product_Quantity": "90",
+      "Product_Category": "Accessories",
       "Manufacturer": "Lavie Pvt Ltd",
       "Vendor": "Pecter Stores",
       "Product_Price": "1200",
@@ -31,6 +34,7 @@
       "id": "4",
       "Product_Name": "Belts",
       "Product_Quantity": "120",
+      "Product_Category": "Accessories",
       "Manufacturer": "Timberland Pvt Ltd",
       "Vendor": "Trends",
       "Product_Price": "20000",
@@ -40,6 +44,7 @@
       "id": "5",
       "Product_Name": "Gloves",
       "Product_Quantity": "50",
+      "Product_Category": "Accessories",
       "Manufacturer": "Appolo Pvt Ltd",
       "Vendor": "Appolo Stores",
       "Product_Price": "500",
@@ -153,6 +158,68 @@
       "Product_Price": "12000",
       "Product_Image": "data:image/jpeg;base64,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",
       "id": 5
+    }
+  ],
+  "reduxproducts": [
+    {
+      "id": 1,
+      "Product_Name": "laptop",
+      "Product_Category": "Electronics",
+      "price": "25000",
+      "Product_Quantity": "20",
+      "Manufacturer": "HP",
+      "Vendor": "Tell traders",
+      "color": "Silver",
+      "inStock": "yes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmHUBmPcAF4P-QV8lsYTD_138c38RSS_yuv9b-Hk9XkztKMQ-V43z7xpnHfhM36ec1Vmx_HB0&usqp=CAc"
+    },
+    {
+      "id": 2,
+      "Product_Name": "HeadPhones",
+      "Product_Category": "Electronics",
+      "price": "2500",
+      "Product_Quantity": "50",
+      "Manufacturer": "Sony",
+      "Vendor": "Te traders",
+      "color": "Black",
+      "inStock": "yes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTvqx9GSRh1FkhAExhMZZNu790FDDeFu64hxlNxlL3zYdtPDzzhw2LJqOCgXsQ&usqp=CAc"
+    },
+    {
+      "id": 3,
+      "Product_Name": "Handbag",
+      "Product_Category": "Acessories",
+      "price": "2500",
+      "Product_Quantity": "40",
+      "Manufacturer": "Ratz",
+      "Vendor": "Tony traders",
+      "color": "blue",
+      "inStock": "yes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBAU__JJyojv7iwI8N2iGduofQRB4vYtTJhg&usqp=CAU"
+    },
+    {
+      "id": 4,
+      "Product_Name": "Watch",
+      "Product_Category": "Accesories",
+      "price": "35000",
+      "Product_Quantity": "70",
+      "manufacturer": "Rolex",
+      "vendor": "Ame traders",
+      "color": "black",
+      "inStock": "yes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQWXAngt8UO3pf6fUUNvxFOlF7FXNJ2w3EJ2K7YROQBA862vQPtwud2HA_E0c_F2mrKDW33snk&usqp=CAc"
+    },
+    {
+      "id": 5,
+      "Product_Name": "Mobile",
+      "Product_Category": "Electronics",
+      "price": "35000",
+      "Product_Quantity": "10",
+      "Manufacturer": "Oppo",
+      "vendor": "Ame traders",
+      "color": "black",
+      "inStock": "yes",
+      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRH1NPTGQ-wKUaj6tuKklBnRepBxJux4HRMSAYqTuwfgbPGiW8xUHT84gULpa9kGHUcgkvpTl_TPPM&usqp=CAc"
     }
   ]
 }
