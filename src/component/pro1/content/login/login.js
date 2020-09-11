@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Axios from 'axios'
-import NavigationBar from '../../header/navbar';
-
+import Nav from '../../header/nav';
+import './login.css';
 class Login extends React.Component {
   constructor(props){
   super(props)
@@ -103,8 +103,12 @@ checkLogin = () => {
 
 render() { 
     return ( 
-       
-      <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+        <div>
+       <div>
+           <Nav></Nav>
+       </div>
+      <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightgrey', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+
         <h1>LOGIN FORM</h1>
        
             <p>Username</p>
@@ -112,12 +116,13 @@ render() {
             <p>Password</p>
             <input type="password" id="pwd" onChange={this.getPwd} placeholder="enter password"></input><br></br>
             <br></br>
-            <button onClick={this.checkLogin} id="login" style={{backgroundcolor:'white', color:' black', border: '2px solid #008CBA'}}>Login</button><span >{this.state.msgResponse} </span>
+            <button onClick={this.checkLogin} id="login" style={{backgroundcolor:'white', color:' black', borderRadius:'20px',border: '2px solid grey',padding: '8px 30px'}}>Login</button><span >{this.state.msgResponse} </span>
             {/* <span >{this.state.pwdResponse}</span> */}
             <br></br><br></br>
-            <Link to='/signup' id="reg">Don't have an account?,signup here</Link>
+            <Link to='/signup' id="reg"style={{color:'black'}}>Don't have an account?,signup here</Link>
                 
        
+        </div>
         </div>
        
      );

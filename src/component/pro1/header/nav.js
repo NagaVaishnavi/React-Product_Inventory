@@ -6,38 +6,41 @@ class NavigationBar extends React.Component {
     render() { 
         const menuitem = {
             color:"red",
-            backgroundColor:"lightblue",
+            height:'50%',
             display:'inline',
-            padding:'18px 675px'
+             padding:'18px 210px',
+            // width:'100%',
+            margin:'auto',
+            
            
-           
-            
-            
-            
-        }
-        let imgStyle ={
-            width:'86px',
-            height:'40px',
-          
-            borderRadius:'10px'
-        }
-
+            }
+        
+            // list-style-type: none;
+            // display: flex;
+            // justify-content: space-evenly;
+            // flex-wrap: wrap;
+            // margin:0;
+            // padding:0
 
         return (  
             <div>
            
-            
-                <ul style={{listStyleType:'none'}}>
+            <div style={{width:'100%',backgroundColor:"grey", padding:'8px',}}>
+                <ul style={{listStyleType:'none', justifycontent:'space-evenly'}}>
+                   
+                   
                     <li style={menuitem}>
-                       <img src="images/logoimage2.jpg" alt="Logo" style={imgStyle}></img>
+                        <Link to="/dashboard" style={{ textDecoration:'none',float:'left',fontSize:'25px',color:'black'}}>Product Inventory</Link>
+                        </li>
+                        
+                   
+                    <li style={menuitem}>
+                        <Link to="/login" style={{ textDecoration:'none',float:'right',fontSize:'25px',marginRight:'2%',color:'black'}}>Signout</Link>
                     </li>
-                   
-                   
-                   
                 </ul>
                 
                 </div>      
-
+</div>
         );
     }
 }

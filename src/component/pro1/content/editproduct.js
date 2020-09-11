@@ -88,7 +88,7 @@ class EditProduct extends React.Component {
         <NavigationBar></NavigationBar>
    <div>
    
-   <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+   <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightgrey', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
    <h3>Edit Product</h3>
    <form>
                
@@ -134,9 +134,9 @@ class EditProduct extends React.Component {
 
                     <p>Product Image: </p>
                     <input type="file" onChange={this.getImage} multiple accept='image/*' />
-                    <br></br><br></br>
+                    <br></br><br></br><br></br>
 
-                    <button type="submit"  onClick={this.editProduct} disabled={this.state.buttonStatus}>Edit Product</button>
+                    <button type="submit"  style={{color:' black', borderRadius:'20px',border: '2px solid grey',padding: '8px 30px'}} onClick={this.editProduct} disabled={this.state.buttonStatus}>Edit Product</button>
                     <br></br>
                     </form>
                     </div>

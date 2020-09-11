@@ -5,45 +5,43 @@ class NavigationBar extends React.Component {
     
     render() { 
         const menuitem = {
-            color:"red",
-            backgroundColor:"lightblue",
+            color:"white",
+            height:'50%',
             display:'inline',
-            padding:'18px 210px'
+             padding:'18px 210px',
+            // width:'100%',
            
            
-            
-            
-            
-        }
-        let imgStyle ={
-            width:'60px',
-            height:'40px',
-           
-            borderRadius:'10px'
-        }
-
+            }
+        
+            // list-style-type: none;
+            // display: flex;
+            // justify-content: space-evenly;
+            // flex-wrap: wrap;
+            // margin:0;
+            // padding:0
 
         return (  
             <div>
            
-            
-                <ul style={{listStyleType:'none'}}>
+            <div style={{width:'99%',backgroundColor:"grey", padding:'8px',}}>
+                <ul style={{listStyleType:'none', justifycontent:'space-evenly'}}>
                    
                    
                     <li style={menuitem}>
-                        <Link to="/dashboard" style={{ textDecoration:'none'}}>Dashboard</Link>
+                        <Link to="/dashboard" style={{ textDecoration:'none',fontSize:'25px',color:'black'}}>Dashboard</Link>
                         </li>
                         <li style={menuitem}>
-                        <Link to="/products" style={{ textDecoration:'none'}}>Products</Link>
+                        <Link to="/products" style={{ textDecoration:'none',fontSize:'25px',color:'black'}}>Products</Link>
                     </li>
                    
                     <li style={menuitem}>
-                        <Link to="/login" style={{ textDecoration:'none'}}>Signout</Link>
+                        <Link to="/login" style={{ textDecoration:'none',fontSize:'25px',color:'black'}}>Signout</Link>
                     </li>
                 </ul>
                 
                 </div>      
-
+</div>
         );
     }
 }

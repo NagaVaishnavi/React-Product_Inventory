@@ -13,6 +13,9 @@ class App extends React.Component {
       products: [],
       searchProducts:[],
             searchValue:'',
+            searchCat:'',
+            searchMan:'',
+            searchVen:'',
             editId:0,
             editClicked:false
     }
@@ -63,6 +66,52 @@ class App extends React.Component {
                         })
     console.log(searchF);    
     this.setState({products: searchF})  
+
+
+}
+getSearch1=(e)=>{
+  let searchC = e.target.value
+  if(searchC===''){
+      this.getProducts()
+  }
+  this.setState({searchCat: searchC})
+  console.log(searchC);
+  let searchCA = this.state.products.filter(p=>{
+                          return p.Product_Category.match(searchC)
+                      })
+  console.log(searchCA);    
+  this.setState({products: searchCA})  
+
+
+}
+
+getSearch2=(e)=>{
+  let searchM = e.target.value
+  if(searchM===''){
+      this.getProducts()
+  }
+  this.setState({searchMan: searchM})
+  console.log(searchM);
+  let searchMA = this.state.products.filter(p=>{
+                          return p.Manufacturer.match(searchM)
+                      })
+  console.log(searchMA);    
+  this.setState({products: searchMA})  
+
+
+}
+getSearch3=(e)=>{
+  let searchP = e.target.value
+  if(searchP===''){
+      this.getProducts()
+  }
+  this.setState({searchVen: searchP})
+  console.log(searchP);
+  let searchVE = this.state.products.filter(p=>{
+                          return p.Vendor.match(searchP)
+                      })
+  console.log(searchVE);    
+  this.setState({products: searchVE})  
 
 
 }
@@ -147,19 +196,33 @@ sort = (event) => {
      
     <div>
 
-                  <div className="c2" style={{width:'100%',align:'center', padding: "45px 40px",margin: '30px 30% 0 30%'}}>
+                  <div className="c2" style={{width:'100%',align:'center', padding: "45px 40px"}}>
                   
-                  <label>Search: </label>
-                  <input type="text"  placeholder="serch for products" style={{padding: "15px 20px"}} value={this.state.searchValue} onChange={this.getSearch}></input>
+                  
+                  <input type="text"  placeholder="search by Name" style={{padding: "12px 20px",marginLeft:'3%',border: '1px solid grey',borderRadius:'60px'}} value={this.state.searchValue} onChange={this.getSearch}></input>
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  <button style={{padding: "15px 20px"}} onClick={this.openAddProduct}>Add Product</button>
+                 
+                  <input type="text"  placeholder="serch by Category" style={{padding: "12px 20px",border: '1px solid grey',borderRadius:'60px'}} value={this.state.searchCat} onChange={this.getSearch1}></input>
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  <select id="sortValue" style={{padding: "15px 20px"}} onChange={this.sort}>
+
+                  <input type="text"  placeholder="serch by Manufacturer" style={{padding: "12px 20px",border: '1px solid grey',borderRadius:'60px'}} value={this.state.searchMan} onChange={this.getSearch2}></input>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                  <input type="text"  placeholder="serch by Vendor" style={{padding: "12px 20px",border: '1px solid grey',borderRadius:'60px'}} value={this.state.searchVen} onChange={this.getSearch3}></input>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                  <select id="sortValue" style={{padding: "15px 20px",border: '1px solid grey',borderRadius:'60px'}} onChange={this.sort}>
                     <option>Sort by</option>
                     <option>price</option>
                     <option>quantity</option>
                    
                 </select>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                  <button style={{padding: "15px 20px",border: '1px solid grey',borderRadius:'60px'}} onClick={this.openAddProduct}>Add Product</button>
+                  
+
+                 
 
                 
               </div>
@@ -170,7 +233,9 @@ sort = (event) => {
       <table >
                 <tr>
               <th>Product Id</th>
+             
                   <th>Product Name</th>
+                  <th>Product_Code</th>
                   <th>Category</th>
                   <th>Manufacturer</th>
                   <th>Vendor</th>
@@ -181,8 +246,11 @@ sort = (event) => {
                   Product Price
                 </span></th>
                   <th>Product Image</th>
-                  <th></th>
-                  <th></th>
+                  <th>Color</th>
+                  <th>Rating</th>
+                  {/* <th></th>
+                  <th></th> */}
+                  <th colSpan="2">Action</th>
                   
                   
                 </tr>
@@ -192,13 +260,17 @@ sort = (event) => {
                       
                       <tr>
                 <td>{product.id}</td>
-                  <td>{product.Product_Name}</td>
+                <td>{product.Product_Name}</td>
+                <td>{product.Product_Code}</td>
+                 
                   <td>{product.Product_Category}</td>
                     <td>{product.Manufacturer}</td>
                     <td>{product.Vendor}</td>
                   <td>{product.Product_Quantity}</td>
                   <td>{product.Product_Price}</td>
                   <td><img src={"images/" + product.Product_Image} style={imgStyle}></img></td>
+                  <td>{product.Color}</td>
+                  <td>{product.rating}</td>
                   
                   <td><input type="button" class="btn" id={product.id} value="Edit"  onClick={this.editHandler} /></td>
                   <td><input type="button" class="btn2"id={product.id} value="Delete"  onClick={this.deleteProduct} /></td>

@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding:0;
+    /* background-image: url(bg1.jpg); */
+     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTwecGI2LfdxKyyZD1pEDzd7P5k64Ey8aH8A&usqp=CAU'); 
+    /* background-color: #617E8C; */
+    background-attachment: fixed;
+    background-size:cover;
+    background-position:center;
+    font-family:sans-serif;
+    background-repeat: no-repeat;
+    
+}
+.c2 input[type="text"], input[type="password"], input[type="number"]
+{
+    border:none;
+    border-bottom: 1px solid black;
+    background:transparent;
+    outline:none;
+    height:15px;
+    color:#fff;
+    font-size:16px;
+}

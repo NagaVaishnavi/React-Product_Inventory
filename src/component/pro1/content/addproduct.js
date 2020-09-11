@@ -164,7 +164,7 @@ class AddProduct extends React.Component {
         return (
             <div>
             <NavigationBar></NavigationBar>
-            <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+            <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightgrey', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
                 <h3>Add New Product</h3>
                 <form>
                
@@ -218,7 +218,7 @@ class AddProduct extends React.Component {
                     <p>Product Image: </p>
                     <input type="file" onChange={this.getImage} multiple accept='image/*' />
                     <br></br><br></br>
-                    <button type="button" onClick={this.addProduct} disabled={this.state.buttonStatus}>Add Product</button>
+                    <button type="button" style={{color:' black', borderRadius:'20px',border: '2px solid grey',padding: '8px 30px'}} onClick={this.addProduct} disabled={this.state.buttonStatus}>Add Product</button>
                     <br></br>
                     
                     

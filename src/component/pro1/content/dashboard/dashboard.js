@@ -106,16 +106,16 @@ class Dashboard extends React.Component {
         <NavigationBar></NavigationBar>
         <div>
           <h3 style={{ marginLeft: "5%" }}>Stock of products based on productnmae</h3>
-          <div style={{ display: 'flex', maxWidth: 1100, margin: "5%" }}>
-            <Chart
+          <div style={{ display: 'flex', maxWidth: 1100, marginLeft: "35%" }}>
+            {/* <Chart
               chartType="Bar"
               loader={<div>Loading Chart</div>}
               data={this.state.barChartData}
-              width="700px"
+              width="500px"
               height="400px"
               legendToggle
 
-            />
+            /> */}
 
             <Chart
               chartType="PieChart"
@@ -125,8 +125,9 @@ class Dashboard extends React.Component {
               options={{
                 title: 'Stock of all products'
               }}
-              width="1000px"
+              width="500px"
               height="500px"
+              
               legendToggle
             />
 
