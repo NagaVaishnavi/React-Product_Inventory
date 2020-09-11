@@ -270,7 +270,7 @@ sort = (event) => {
                   <td>{product.Product_Price}</td>
                   <td><img src={"images/" + product.Product_Image} style={imgStyle}></img></td>
                   <td>{product.Color}</td>
-                  <td>{product.rating}</td>
+                  <td>{product.Rating}</td>
                   
                   <td><input type="button" class="btn" id={product.id} value="Edit"  onClick={this.editHandler} /></td>
                   <td><input type="button" class="btn2"id={product.id} value="Delete"  onClick={this.deleteProduct} /></td>

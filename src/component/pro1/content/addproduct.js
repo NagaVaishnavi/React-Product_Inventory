@@ -8,12 +8,15 @@ class AddProduct extends React.Component {
         this.state ={
             productid:'',
             productname:'',
+            code:'',
             productcategory:'',
             manufacturer:'',
             vendor:'',
             productquantity:'',
             productprice:'',
             productimage:'',
+            color:'',
+            rating:'',
             buttonStatus: false
         }
     }
@@ -70,6 +73,21 @@ class AddProduct extends React.Component {
             this.checkValidation()
             this.setState({productname: event.target.value})
             this.checkValidation()
+            }
+
+            getPcode=(event)=>{
+                console.log(event.target.value)
+                this.setState({code:event.target.value})
+            }
+
+            getPcolor=(event)=>{
+                console.log(event.target.value)
+                this.setState({color:event.target.value})
+            }
+        
+            getPrating=(event)=>{
+                console.log(event.target.value)
+                this.setState({rating:event.target.value})
             }
 
             getCategory=(event)=>{
@@ -140,12 +158,15 @@ class AddProduct extends React.Component {
             let productRequestBody = {
                 "id":this.state.productid,
                 "Product_Name": this.state.productname,
+                "Product_Code": this.state.code,
                 "Product_Category":this.state.productcategory,
                 "Product_Quantity":this.state.productquantity,
                 "Manufacturer":this.state.manufacturer,
                 "Vendor":this.state.vendor,
                 "Product_Price":this.state.productprice,
-                "Product_Image":this.state.productimage
+                "Color":this.state.color,
+                "Rating":this.state.rating,
+                "Product_Image": this.state.productimage,
                 
             }
             axios.post('http://localhost:3000/allproducts', productRequestBody)
@@ -190,6 +211,11 @@ class AddProduct extends React.Component {
                     {this.state.nameError}
                     <br></br>
 
+
+                    <p>ProductCode</p>
+                    <input type="text" id="pcode"  onChange={this.getPcode}></input><span style={{ color: "red" }}>{this.state.nameError}</span>
+                    <br></br>
+
                     <p>Product Category: </p>
                     <input type='text' id="productcategory" onChange={this.getCategory}></input>
                     {this.state.nameError}
@@ -213,13 +239,25 @@ class AddProduct extends React.Component {
                     <p>Product Price: </p>
                     <input type='number' id="productprice" onChange={this.getPrice}></input>
                     {this.state.nameError}
-                    <br></br> <br></br>
+                    <br></br> 
 
+
+                    <p>Color :</p>
+                    <input type="text" id="color" onChange={this.getPcolor}></input>
+                    <br></br>
+
+                    <p>Rating :</p>
+                    <input type="number" id="rating"  onChange={this.getPrating}></input>
+                    <br></br>
+
+                    
                     <p>Product Image: </p>
                     <input type="file" onChange={this.getImage} multiple accept='image/*' />
                     <br></br><br></br>
+
                     <button type="button" style={{color:' black', borderRadius:'20px',border: '2px solid grey',padding: '8px 30px'}} onClick={this.addProduct} disabled={this.state.buttonStatus}>Add Product</button>
                     <br></br>
+                    
                     
                     
                 </form>

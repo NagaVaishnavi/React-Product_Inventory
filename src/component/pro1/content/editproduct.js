@@ -112,6 +112,12 @@ class EditProduct extends React.Component {
                     {this.state.nameError}
                     <br></br>
 
+                    
+                    <p>ProductCode: </p>
+                    <input type='text' value={this.state.code} id="code" onChange={this.codeChangeHandler}></input>
+                    {this.state.nameError}
+                    <br></br>
+
                     <p>Manufacturer: </p>
                     <input type='text' value={this.state.manufacturer} id="manufacturer" onChange={this.manufacturerChangeHandler}></input>
                     {this.state.nameError}
@@ -132,10 +138,22 @@ class EditProduct extends React.Component {
                     {this.state.nameError}
                     <br></br> <br></br>
 
+                  
+
+                    <p>Color: </p>
+                    <input type='text' id="color" onChange={this.colorChangeHandler}></input>
+                    {this.state.nameError}
+                    <br></br> <br></br>
+
+                    <p>Rating: </p>
+                    <input type='number' id="rating" onChange={this.ratingChangeHandler}></input>
+                    {this.state.nameError}
+                    <br></br>
+
+
                     <p>Product Image: </p>
                     <input type="file" onChange={this.getImage} multiple accept='image/*' />
-                    <br></br><br></br><br></br>
-
+                    <br></br><br></br>
                     <button type="submit"  style={{color:' black', borderRadius:'20px',border: '2px solid grey',padding: '8px 30px'}} onClick={this.editProduct} disabled={this.state.buttonStatus}>Edit Product</button>
                     <br></br>
                     </form>

@@ -2,7 +2,7 @@
   "allproducts": [
     {
       "id": "1",
-      "Product_Code":"A01",
+      "Product_Code": "A01",
       "Product_Name": "sunglasses",
       "Product_Category": "Accessories",
       "Product_Quantity": "100",
@@ -10,12 +10,12 @@
       "Vendor": "Sun Traders",
       "Product_Price": "10000",
       "Product_Image": "sunglass.jpg",
-      "Color":"Black",
-      "rating": "5"
+      "Color": "Black",
+      "Rating": "5"
     },
     {
       "id": "2",
-      "Product_Code":"A02",
+      "Product_Code": "A02",
       "Product_Name": "Watches",
       "Product_Quantity": "150",
       "Product_Category": "Accessories",
@@ -23,12 +23,12 @@
       "Vendor": "Apilo Traders",
       "Product_Price": "14994",
       "Product_Image": "watch.jpg",
-      "Color":"Blue",
-      "rating": "5"
+      "Color": "Blue",
+      "Rating": "5"
     },
     {
       "id": "3",
-      "Product_Code":"A03",
+      "Product_Code": "A03",
       "Product_Name": "Handbags",
       "Product_Quantity": "90",
       "Product_Category": "Accessories",
@@ -36,12 +36,12 @@
       "Vendor": "Pecter Stores",
       "Product_Price": "1200",
       "Product_Image": "handbag.jpg",
-      "Color":"red",
-      "rating": "5"
+      "Color": "red",
+      "Rating": "5"
     },
     {
       "id": "4",
-      "Product_Code":"A04",
+      "Product_Code": "A04",
       "Product_Name": "Belts",
       "Product_Quantity": "120",
       "Product_Category": "Accessories",
@@ -49,21 +49,21 @@
       "Vendor": "Trends",
       "Product_Price": "20000",
       "Product_Image": "belt.jpg",
-      "Color":"Black",
-      "rating": "5"
+      "Color": "Black",
+      "Rating": "5"
     },
     {
       "id": "5",
-      "Product_Code":"A05",
       "Product_Name": "Gloves",
-      "Product_Quantity": "50",
+      "Product_Code": "A05",
       "Product_Category": "Accessories",
-      "Manufacturer": "Appolo Pvt Ltd",
-      "Vendor": "Appolo Stores",
-      "Product_Price": "500",
-      "Product_Image": "gloves.jpg",
-      "Color":"orange",
-      "rating": "5"
+      "Product_Quantity": "300",
+      "Manufacturer": "Av pvt ltd",
+      "Vendor": "Av traders",
+      "Product_Price": "489",
+      "Color": "orange",
+      "Rating": "5",
+      "Product_Image": "gloves.jpg"
     }
   ],
   "registerdetails": [
