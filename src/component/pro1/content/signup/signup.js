@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Axios from 'axios'
-
+import Nav from '../../header/nav';
 class Signup extends React.Component {
   
 
@@ -120,7 +120,12 @@ class Signup extends React.Component {
 
     render() {
         return (
-          <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightblue', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+
+            <div>
+       <div>
+           <Nav></Nav>
+       </div>
+          <div className="c2" style={{width:'30%',align:'center',backgroundColor: '#4C516D', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
                 <h2>REGISTER HERE.!!</h2>
                 <form>
                     <p>Name </p>
@@ -138,11 +143,11 @@ class Signup extends React.Component {
                     <p>Confirm Password</p>
                     <input type="password" id="cpwd" onChange={this.getCpwd} required></input>
                     <br></br><br></br>
-                    <button id="save" onClick={this.saveUser} disabled={this.state.buttonStatus} style={{backgroundcolor:'white', color:' black', border: '2px solid #008CBA'}}>SignUp</button>
+                    <button id="save" onClick={this.saveUser} disabled={this.state.buttonStatus} style={{backgroundcolor:'white', color:' black', border: '3px solid #f1f1f1',borderRadius:'20px',}}>SignUp</button>
                     <br></br><br></br>
-                    <Link to='/login' id="reg">Already a member,login here..</Link>
+                    <Link to='/login' id="reg" style={{color:'black'}}>Already a member,login here..</Link>
                 </form>
-            </div>
+            </div></div>
         );
     }
 

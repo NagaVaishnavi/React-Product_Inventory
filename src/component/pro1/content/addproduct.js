@@ -185,7 +185,7 @@ class AddProduct extends React.Component {
         return (
             <div>
             <NavigationBar></NavigationBar>
-            <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightgrey', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+            <div className="c2" style={{width:'30%',align:'center',backgroundColor: '#4C516D', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
                 <h3>Add New Product</h3>
                 <form>
                

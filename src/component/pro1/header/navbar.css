@@ -1,0 +1,49 @@
+/* @media screen and (max-width: 1000px) {
+
+ 
+    nav ul li {
+    margin: auto;
+    width: 100%; 
+    } 
+    }
+ */
+@media screen and (max-width: 800px) {
+    .a1
+    {
+        width:100%;
+        background-color: grey;
+         padding:8px;
+     
+        }
+    }
+
+    .a1
+    {
+        width:100%;
+        background-color: #46516D;
+         padding:8px;
+        
+        }
+
+        @media screen and (max-width: 800px) {
+
+ 
+            nav ul li {
+            margin: auto;
+             float: none;
+            width: 100%;
+            
+             
+            }
+            
+             
+            }
+            .a2{
+                 
+            /* height: 50%;
+            display:inline;
+              
+              /* justify-content: space-evenly;
+            width:auto */ 
+            padding:1rem; 
+            }

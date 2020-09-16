@@ -107,12 +107,12 @@ render() {
        <div>
            <Nav></Nav>
        </div>
-      <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightgrey', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+      <div className="c2" style={{width:'20%',align:'center',backgroundColor: '#4C516D', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '5% 0 0 38%'}}>
 
         <h1>LOGIN FORM</h1>
        
             <p>Username</p>
-            <input type="text" id="uname" onChange={this.getUname} placeholder="Enter username"></input><br></br>
+            <input type="text" id="uname"  onChange={this.getUname} placeholder="Enter username"></input><br></br>
             <p>Password</p>
             <input type="password" id="pwd" onChange={this.getPwd} placeholder="enter password"></input><br></br>
             <br></br>

@@ -3,15 +3,16 @@
     {
       "id": "1",
       "Product_Code": "A01",
-      "Product_Name": "sunglasses",
+      "Product_Name": "Sunglasses",
+      "Product_Quantity": "150",
       "Product_Category": "Accessories",
-      "Product_Quantity": "100",
-      "Manufacturer": "Safilo Pvt Ltd",
-      "Vendor": "Sun Traders",
-      "Product_Price": "10000",
+      "Manufacturer": "Sun Pvt Ltd",
+      "Vendor": "sal Traders",
+      "Product_Price": "2000",
       "Product_Image": "sunglass.jpg",
       "Color": "Black",
-      "Rating": "5"
+      "Rating": "5",
+      "Instock": "Yes"
     },
     {
       "id": "2",
@@ -24,7 +25,8 @@
       "Product_Price": "14994",
       "Product_Image": "watch.jpg",
       "Color": "Blue",
-      "Rating": "5"
+      "Rating": "5",
+      "Instock": "Yes"
     },
     {
       "id": "3",
@@ -37,7 +39,8 @@
       "Product_Price": "1200",
       "Product_Image": "handbag.jpg",
       "Color": "red",
-      "Rating": "5"
+      "Rating": "5",
+      "Instock": "Yes"
     },
     {
       "id": "4",
@@ -50,7 +53,8 @@
       "Product_Price": "20000",
       "Product_Image": "belt.jpg",
       "Color": "Black",
-      "Rating": "5"
+      "Rating": "5",
+      "Instock": "Yes"
     },
     {
       "id": "5",
@@ -63,7 +67,8 @@
       "Product_Price": "489",
       "Color": "orange",
       "Rating": "5",
-      "Product_Image": "gloves.jpg"
+      "Product_Image": "gloves.jpg",
+      "Instock": "Yes"
     }
   ],
   "registerdetails": [

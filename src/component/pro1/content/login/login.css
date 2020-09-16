@@ -1,4 +1,5 @@
-body{
+
+    body{
     margin: 0;
     padding:0;
     /* background-image: url(bg1.jpg); */
@@ -9,8 +10,8 @@ body{
     background-position:center;
     font-family:sans-serif;
     background-repeat: no-repeat;
-    
-}
+    }
+
 .c2 input[type="text"], input[type="password"], input[type="number"]
 {
     border:none;
@@ -21,3 +22,16 @@ body{
     color:black;
     font-size:16px;
 }
+
+::placeholder {
+    color:grey;
+    font-size: 15px;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #4C516D;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: red;
+  }

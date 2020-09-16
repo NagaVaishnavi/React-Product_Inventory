@@ -219,7 +219,7 @@ sort = (event) => {
                 </select>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-                  <button style={{padding: "15px 20px",border: '1px solid grey',borderRadius:'60px'}} onClick={this.openAddProduct}>Add Product</button>
+                  <button style={{color:"white",padding: "15px 20px",border: '1px solid grey',borderRadius:'60px',backgroundColor: '#4C516D'}} onClick={this.openAddProduct}>Add Product</button>
                   
 
                  
@@ -248,6 +248,7 @@ sort = (event) => {
                   <th>Product Image</th>
                   <th>Color</th>
                   <th>Rating</th>
+                  <th>InStock</th>
                   {/* <th></th>
                   <th></th> */}
                   <th colSpan="2">Action</th>
@@ -271,6 +272,7 @@ sort = (event) => {
                   <td><img src={"images/" + product.Product_Image} style={imgStyle}></img></td>
                   <td>{product.Color}</td>
                   <td>{product.Rating}</td>
+                    <td>{product.Instock}</td>
                   
                   <td><input type="button" class="btn" id={product.id} value="Edit"  onClick={this.editHandler} /></td>
                   <td><input type="button" class="btn2"id={product.id} value="Delete"  onClick={this.deleteProduct} /></td>

@@ -25,7 +25,7 @@ class NavigationBar extends React.Component {
         return (  
             <div>
            
-            <div style={{width:'100%',backgroundColor:"grey", padding:'8px',}}>
+            <div style={{width:'100%',backgroundColor:"#46516D", padding:'8px',}}>
                 <ul style={{listStyleType:'none', justifycontent:'space-evenly'}}>
                    
                    

@@ -4,7 +4,6 @@ import NavigationBar from '../header/navbar';
 class EditProduct extends React.Component {
     state = { 
         pname:'',
-      
         quantity:'',
         price:'',
         manufacturer:'',
@@ -88,7 +87,7 @@ class EditProduct extends React.Component {
         <NavigationBar></NavigationBar>
    <div>
    
-   <div className="c2" style={{width:'30%',align:'center',backgroundColor: 'lightgrey', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
+   <div className="c2" style={{width:'30%',align:'center',backgroundColor: '#4C516D', padding:'3% 3% 3% 3%',border: '3px solid #f1f1f1',margin: '30px 30% 0 35%'}}>
    <h3>Edit Product</h3>
    <form>
                
@@ -136,14 +135,14 @@ class EditProduct extends React.Component {
                     <p>Product Price: </p>
                     <input type='number' id="productprice" onChange={this.priceChangeHandler}></input>
                     {this.state.nameError}
-                    <br></br> <br></br>
+                    <br></br> 
 
                   
 
                     <p>Color: </p>
                     <input type='text' id="color" onChange={this.colorChangeHandler}></input>
                     {this.state.nameError}
-                    <br></br> <br></br>
+                    <br></br>
 
                     <p>Rating: </p>
                     <input type='number' id="rating" onChange={this.ratingChangeHandler}></input>
